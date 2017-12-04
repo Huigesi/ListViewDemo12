@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\androidProject\\ListViewDemo12\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ecb00a33567fa73812f40db6c449a4d8ab969534\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    }
+]
