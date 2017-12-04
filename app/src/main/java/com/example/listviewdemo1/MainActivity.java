@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 	private ListView mListView;
 	private Thread mThread;
 	private String mString;
-	// 易错点总结：官方给的api有误（action）
+	// ??????????????api????action??
 	private String mPath = "http://192.168.1.243:8080/transportservice/type/jason/action/GetTrafficLightConfigAction.do";
 	private int time = 0;
 	private List<String> arr_list;
@@ -66,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
 		initView();
 		setListener();
 		setListView();
-		// 不要在一开始执行，会影响按钮点下去时的结果
+		// ??????????????????????????????
 		/*
 		 * setThread(); mThread.start();
 		 */
@@ -80,7 +80,7 @@ public class MainActivity extends ActionBarActivity {
 				int count = 1;
 				while (count <= 5) {
 					mHandler.sendEmptyMessage(SHOW_DIALOG);
-					// 易错点：官方的post参数也有错，应该为Id,不是ID。
+					// ?????????post?????????????Id,????ID??
 					mString = HttpClients.sendMessage(mPath,
 							"{\"TrafficLightId\":" + count + "}");
 					Log.i("mString", mString);
@@ -94,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 				}
 				super.run();
 				sort();
-				// 数据弄完后才刷新页面（减少闪退）
+				// ?????????????????????????
 				mHandler.sendEmptyMessage(UP_DATE);
 			}
 		};
@@ -102,21 +102,21 @@ public class MainActivity extends ActionBarActivity {
 
 	private void sort() {
 		String item = mSpinner.getSelectedItem().toString();
-		if (item.equals("灯号升序")) {
+		if (item.equals("???????")) {
 			idSort1();
-		} else if (item.equals("红灯升序")) {
+		} else if (item.equals("???????")) {
 			redSort1();
-		} else if (item.equals("绿灯升序")) {
+		} else if (item.equals("???????")) {
 			greenSort1();
-		} else if (item.equals("黄灯升序")) {
+		} else if (item.equals("???????")) {
 			yellowSort1();
-		} else if (item.equals("灯号降序")) {
+		} else if (item.equals("??????")) {
 			idSort2();
-		} else if (item.equals("红灯降序")) {
+		} else if (item.equals("??????")) {
 			redSort2();
-		} else if (item.equals("绿灯降序")) {
+		} else if (item.equals("??????")) {
 			greenSort2();
-		} else if (item.equals("黄灯降序")) {
+		} else if (item.equals("??????")) {
 			yellowSort2();
 		}
 	}
@@ -136,7 +136,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	private void setListView() {
-		// 易错点总结：必须是MainActivity.this，不能直接this
+		// ?????????????MainActivity.this?????????this
 		mAdapter = new DataAdapter(MainActivity.this, mList);
 		mListView.setAdapter(mAdapter);
 		arr_adapter = new ArrayAdapter<String>(MainActivity.this,
@@ -198,7 +198,7 @@ public class MainActivity extends ActionBarActivity {
 				mSetDialog.dismiss();
 			}
 		});
-		mSetDialog.setTitle("红绿灯设置");
+		mSetDialog.setTitle("?????????");
 		mSetDialog.setCancelable(true);
 		mSetDialog.show();
 
@@ -215,14 +215,14 @@ public class MainActivity extends ActionBarActivity {
 		mList = new ArrayList<ItemBean>();
 		arr_list = new ArrayList<String>();
 
-		arr_list.add("红灯升序");
-		arr_list.add("灯号升序");
-		arr_list.add("绿灯升序");
-		arr_list.add("黄灯升序");
-		arr_list.add("灯号降序");
-		arr_list.add("红灯降序");
-		arr_list.add("绿灯降序");
-		arr_list.add("黄灯降序");
+		arr_list.add("???????");
+		arr_list.add("???????");
+		arr_list.add("???????");
+		arr_list.add("???????");
+		arr_list.add("??????");
+		arr_list.add("??????");
+		arr_list.add("??????");
+		arr_list.add("??????");
 	}
 
 	private void handMessage() {
@@ -230,7 +230,7 @@ public class MainActivity extends ActionBarActivity {
 
 			@Override
 			public boolean handleMessage(Message msg) {
-				// 易错点总结：必须把对话框去掉再去刷新页面
+				// ????????????????????????????
 				mDialog.dismiss();
 				switch (msg.what) {
 				case UP_DATE:
@@ -255,9 +255,9 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	private void getDialog() {
-		// 这里道可以this
+		// ?????????this
 		mDialog = new ProgressDialog(this);
-		mDialog.setMessage("正在加载");
+		mDialog.setMessage("???????");
 	}
 
 	private void redSort1() {
@@ -265,7 +265,7 @@ public class MainActivity extends ActionBarActivity {
 
 			@Override
 			public int compare(ItemBean b1, ItemBean b2) {
-				// 易错点，b1,b2记得改
+				// ????b1,b2????
 				if (b1.getmRed() <= b2.getmRed()) {
 					return -1;
 				} else {

@@ -29,7 +29,6 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return mList.size();
 	}
 
@@ -49,7 +48,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		
 		 holder=null;
-		//Ò×´íµã×Ü½á1£º¸´ÖÆÕ³Ìù½á¹ûÃû×ÖÃ»¸Ä
+		//ï¿½×´ï¿½ï¿½ï¿½Ü½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½
 		ItemBean bean=mList.get(position);
 		if(convertView==null){
 			convertView=mInflater.inflate(R.layout.item, parent, false);
@@ -72,7 +71,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 		holder.textView2.setText(String.valueOf(bean.getmRed()));
 		holder.textView3.setText(String.valueOf(bean.getmGreen()));
 		holder.textView4.setText(String.valueOf(bean.getmYellow()));
-		holder.b1.setText("°´Å¥"+position);
+		holder.b1.setText("ï¿½ï¿½Å¥"+position);
 		
 		holder.b1.setOnClickListener(new View.OnClickListener() {
 			
@@ -81,10 +80,10 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 				
 				boolean flag=holder.c1.isChecked();
 				settingDialog();
-				Toast.makeText(mContext, "Ñ¡ÁËµÚ"+position+"¸ö", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "Ñ¡ï¿½Ëµï¿½"+position+"ï¿½ï¿½", Toast.LENGTH_SHORT).show();
 				ItemBean bean=mList.get(position);
 				bean.getmId();
-				Toast.makeText(mContext, "Ñ¡ÁËµÚ"+bean.getmId()+"ºÅ", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "Ñ¡ï¿½Ëµï¿½"+bean.getmId()+"ï¿½ï¿½", Toast.LENGTH_SHORT).show();
 				Toast.makeText(mContext, flag+"", Toast.LENGTH_SHORT).show();
 			}
 		});
@@ -115,7 +114,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 				mSetDialog.dismiss();
 			}
 		});
-		mSetDialog.setTitle("ºìÂÌµÆÉèÖÃ");
+		mSetDialog.setTitle("ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½");
 		mSetDialog.setCancelable(true);
 		mSetDialog.show();
 	
