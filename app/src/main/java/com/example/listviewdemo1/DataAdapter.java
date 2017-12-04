@@ -36,7 +36,6 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 
 	@Override
 	public ItemBean getItem(int position) {
-		// TODO Auto-generated method stub
 		return mList.get(position);
 	}
 	@Override
