@@ -47,7 +47,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		
 		 holder=null;
-		//�״���ܽ�1������ճ���������û��
+		//???????1???????????????????
 		ItemBean bean=mList.get(position);
 		if(convertView==null){
 			convertView=mInflater.inflate(R.layout.item, parent, false);
@@ -70,7 +70,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 		holder.textView2.setText(String.valueOf(bean.getmRed()));
 		holder.textView3.setText(String.valueOf(bean.getmGreen()));
 		holder.textView4.setText(String.valueOf(bean.getmYellow()));
-		holder.b1.setText("��ť"+position);
+		holder.b1.setText("???"+position);
 		
 		holder.b1.setOnClickListener(new View.OnClickListener() {
 			
@@ -79,10 +79,10 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 				
 				boolean flag=holder.c1.isChecked();
 				settingDialog();
-				Toast.makeText(mContext, "ѡ�˵�"+position+"��", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "????"+position+"??", Toast.LENGTH_SHORT).show();
 				ItemBean bean=mList.get(position);
 				bean.getmId();
-				Toast.makeText(mContext, "ѡ�˵�"+bean.getmId()+"��", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "????"+bean.getmId()+"??", Toast.LENGTH_SHORT).show();
 				Toast.makeText(mContext, flag+"", Toast.LENGTH_SHORT).show();
 			}
 		});
@@ -113,7 +113,7 @@ public class DataAdapter extends ArrayAdapter<ItemBean>{
 				mSetDialog.dismiss();
 			}
 		});
-		mSetDialog.setTitle("���̵�����");
+		mSetDialog.setTitle("?????????");
 		mSetDialog.setCancelable(true);
 		mSetDialog.show();
 	
